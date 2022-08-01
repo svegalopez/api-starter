@@ -14,4 +14,8 @@ app.get("/users", async (req, res) => {
   res.json(await knex("users"));
 });
 
+app.get("/my-new-endpoint", (req, res) => {
+  res.send("OK");
+});
+
 module.exports = app;

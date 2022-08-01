@@ -73,7 +73,7 @@ If you are using ssh :
 
 Note that you will need to replace "username" and "repo-name" for your own values. If you encounter authentication errors see [this article](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github#authenticating-with-the-command-line).<br>
 
-At this point your app will be deployed to staging automatically given you pushed to your origin's main branch. To verify the action is running visit your repo's Actions tab, and you should see this : <br><br>
+At this point your app will be deployed to staging automatically given you pushed to your origin's main branch. The action that deploys automatically is configured in the file located at `.github/workflows/deploy-staging.yml` (take a look at the file and examine the steps). To verify the action is running visit your repo's Actions tab, and you should see this : <br><br>
 
    ![](assets/initial_commit.png)
 
