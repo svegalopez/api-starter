@@ -1,0 +1,25 @@
+name: Deploy Staging
+
+on:
+  push:
+    branches: [main] # Must match the name of your repo's default branch
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v3
+
+      - name: Heroku Login
+        uses: svegalopez/heroku-login-action@main
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          email: ${{secrets.HEROKU_EMAIL}}
+          
+      - name: Heroku Deploy
+        run: |
+          git fetch --prune --unshallow
+          heroku git:remote -a ${{secrets.HEROKU_STAGING_NAME}}
+          git push heroku main
