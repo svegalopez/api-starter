@@ -1,6 +1,9 @@
 const express = require("express");
 const knex = require("./knex");
 const app = express();
+const cors = require("cors");
+
+app.use(cors());
 
 app.get("/", async (req, res) => {
   res.send(`<h1>Welcome to my API<h1>`);
