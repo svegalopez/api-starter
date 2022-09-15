@@ -23,6 +23,7 @@ app.get("/my-new-endpoint", (req, res) => {
 });
 
 app.get("/five-things", (req, res) => {
+  console.log("5 things being requested");
   res.json(["Can", "Cup", "Sprinkler", "Palm", "Couch"]);
 });
 
