@@ -19,4 +19,8 @@ app.get("/my-new-endpoint", (req, res) => {
   res.send("OK");
 });
 
+app.get("/five-things", (req, res) => {
+  res.json(["Bottle", "Tub", "Sprinkler", "Palm", "Couch"]);
+});
+
 module.exports = app;
