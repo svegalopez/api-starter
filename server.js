@@ -23,7 +23,7 @@ app.get("/my-new-endpoint", (req, res) => {
 });
 
 app.get("/five-things", (req, res) => {
-  res.json(["Can", "Tub", "Sprinkler", "Palm", "Couch"]);
+  res.json(["Can", "Cup", "Sprinkler", "Palm", "Couch"]);
 });
 
 module.exports = app;
